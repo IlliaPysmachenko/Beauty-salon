@@ -1,0 +1,28 @@
+@import 'nullstyle.scss';
+@import '_fonts.scss';
+
+body {
+	font-family: 'Gilroy-regular';
+	color: #fff;
+}
+
+h1 {
+	font-family: 'NTR';
+	font-size: 70px;
+}
+
+.container {
+	max-width: 1035px;
+	margin: 0 auto;
+}
+
+.firs-screen {
+	width: 100%;
+	max-height: 745px;
+	background: url('/img/model1.png')no-repeat center ;
+	background-size: cover;
+}
+
+.header_row {
+	display: flex;
+}

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Gilroy-black";
+  src: url(../../fonts/Gilroy/Gilroy-Black.ttf);
+}
+@font-face {
+  font-family: "Gilroy-regular";
+  src: url(../../fonts/Gilroy/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy-medium";
+  src: url(../../fonts/Gilroy/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: "Gilroy-bold";
+  src: url(../../fonts/Gilroy/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-semibold";
+  src: url(../../fonts/Gilroy/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-light";
+  src: url(../../fonts/Gilroy/Gilroy-Light.ttf);
+}
+@font-face {
+  font-family: "NTR";
+  src: url(../../fonts/NTR/NTR-Regular.ttf);
+}
+body {
+  font-family: "Gilroy-regular";
+  color: #fff;
+}
+
+h1 {
+  font-family: "NTR";
+  font-size: 70px;
+}
+
+.container {
+  max-width: 1035px;
+  margin: 0 auto;
+}
+
+.firs-screen {
+  width: 100%;
+  max-height: 745px;
+  background: url("/img/model1.png") no-repeat center;
+  background-size: cover;
+}
+
+.header_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

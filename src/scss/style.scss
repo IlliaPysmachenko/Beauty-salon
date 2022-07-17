@@ -2,27 +2,156 @@
 @import '_fonts.scss';
 
 body {
+
 	font-family: 'Gilroy-regular';
+	font-size: 15px;
 	color: #fff;
 }
 
 h1 {
 	font-family: 'NTR';
-	font-size: 70px;
+	font-size: 50px;
 }
 
 .container {
-	max-width: 1035px;
+	min-width: 300px;
+	max-width: 767px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
-.firs-screen {
+.btn{
+	position: relative;
+	width: 187px;
+	height: 53px;
+	border: 2px solid #fff;
+	&::after{
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: -15%;
+		width: 50px;
+		height: 2px;
+		background-color: #BF9C24;
+	}
+	a{
+		display: flex;
+		flex: 1 1 auto;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		font-weight: 700;
+		color: #BF9C24;
+		&:visited{
+			color: #BF9C24;
+		}
+	}
+}
+
+
+
+
+.wrapper__first{
+	background: url(/images/first-screen/model1.png) center/ cover no-repeat;
+}
+
+.first-screen{
+	padding-top: 30px;
+}
+
+
+
+
+.burger{
+	display: block;
+	position: fixed;
+	top: 28px;
+	left: 10px;
+	width: 35px;
+	height: 20px;
+	&::before,&::after {
+		content: '';
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		display: block;
+	}
+	span{
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		display: block;
+		margin: 5px 0;
+	}
+}
+
+.label{
+	text-align: center;
+	font-size: 18px;
+}
+
+.basket{
+	position: fixed;
+	top: 28px;
+	right: 10px;
+	width: 42px;
+	height: 28px;
+	font-size: 20px;
+
+
+}
+
+.header__menu{
 	width: 100%;
-	max-height: 745px;
-	background: url('/images/model1.png')no-repeat center ;
-	background-size: cover;
-}
-
-.header_row {
+	height: 100%;
 	display: flex;
 }
+
+.menu{
+	display: none;
+	position: fixed;
+	font-size: 17px;
+	text-align: center;
+	li {
+		padding-bottom: 18px;
+	}
+	a:visited{
+		color: #fff;
+	}
+}
+
+.first-screeen__content{
+	padding: 160px 0;
+	.first-screeen__title{
+		padding-bottom: 20px;
+	}
+	.first-screeen__text{
+		padding-bottom: 35px;
+	}
+	// &::after{
+	// 	content: '';
+	// 	width: 265px;
+	// 	height: 15px;
+	// 	border-top: 5px dotted #40423B;
+	// 	border-bottom: 5px dotted #40423B;
+	// 	display: block;
+	// }
+}
+
+.first-screen__dots{
+	width: 265px;
+	height: 18px;
+	// /*Horizontal*/
+	// background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
+	// background-position: bottom;
+	// background-size: 3px 1px;
+	// background-repeat: repeat-x;
+
+	// /*Vertical*/
+	// background-image: linear-gradient(black 33%, rgba(255,255,255,0) 0%);
+	// background-position: right;
+	// background-size: 1px 3px;
+	// background-repeat: repeat-y;
+}
+

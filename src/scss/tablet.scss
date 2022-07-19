@@ -1,0 +1,32 @@
+@media(min-width: 767px){
+	.container{
+		min-width: 768px;
+	}
+
+	h1{
+		font-size: 70px;
+	}
+
+	.header__menu{
+		max-width: 643px;
+		align-items: flex-start;
+		// padding-left: 10px;
+	}
+
+	.header__column{
+		max-height: 100%;
+	}
+
+	.menu{
+		text-align: left;
+	}
+
+	.socials{
+		align-items: start;
+		text-align: left;
+	}
+
+	.first-screeen__content{
+		max-width: 492px;
+	}
+}

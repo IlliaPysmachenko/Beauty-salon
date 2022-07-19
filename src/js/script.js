@@ -1,19 +1,34 @@
 'use strict'
 function main() {
+	
 
-	function burgerBtn() {
-		let header = document.querySelector('.header__menu');
+	//----------Toggle burger menu-------------
+
+	let header = document.querySelector('.header__menu');
+	let burger = document.querySelector('.burger');
+	
+	const toggleHeader = () => {
 		header.classList.toggle('active');
-		
-		let burger = document.querySelector('.burger');
 		burger.classList.toggle('active');
-		
-		
 	}
+	
+	burger.addEventListener('click', event => {
+		event.stopPropagation();
 
-	document.querySelector('.burger').addEventListener('click', burgerBtn)
+		toggleHeader();
+	})
 
+	document.addEventListener('click', event => {
+		let target = event.target;
+		let itsHeader = target == header || header.contains(target);
+		let itsBurger = target == burger;
+		let headerIsActive = header.classList.contains('active');
+		if(!itsHeader && !itsBurger && headerIsActive) {
+			toggleHeader();
+		}
+	})
 
+//----------------------------------------------
 
 
 

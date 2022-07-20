@@ -3,13 +3,14 @@ function main() {
 	
 
 	//----------Toggle burger menu-------------
-
-	let header = document.querySelector('.header__menu');
+	let bg = document.querySelector('.burger__body');
+	let header = document.querySelector('.burger__bg');
 	let burger = document.querySelector('.burger');
 	
 	const toggleHeader = () => {
 		header.classList.toggle('active');
 		burger.classList.toggle('active');
+		bg.classList.toggle('active');
 	}
 	
 	burger.addEventListener('click', event => {

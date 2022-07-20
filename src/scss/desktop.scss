@@ -1,9 +1,7 @@
 @media(min-width: 992px){
 
 
-	body{
-		
-	}
+	
 
 	.container{
 		max-width: 1058px;
@@ -41,7 +39,6 @@
 		position: static;
 		display: inline-flex;
 		flex-direction: column;
-		// justify-content: space-around;
 		min-height: 150%;
 		max-height: 500%;
 		float: left;
@@ -60,11 +57,7 @@
 		position: fixed;
 		flex: 1;
 		justify-content: flex-end;
-		// height: 100%;
-		// flex: 1;
-		// position: sticky;
-		// display: inline-flex;
-		// float: left;
+
 		width: 100%;
 		transform: translate(0px, 0px);
 	}
@@ -86,32 +79,23 @@
 		position: sticky;
 		display: inline;
 		float: right;
-		// padding-top: 28px;
-		// right: 180px;
+
 	}
 
 	.burger__wrapper {
 		position: relative;
-		// flex: 1;
-		// justify-content: center;
 		width: 100%;
 		height: 100vh;
-	
-		
-		// padding-bottom: 5%;
 	}
 
 	.burger__column {
-
 		min-height: 100%;
-
 
 		margin: 0;
 		margin-left: 15px;
 		justify-content: space-around;
 		text-align: left;
 	}
-
 
 	.first-screeen__content{
 		max-width: 685px;

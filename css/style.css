@@ -395,6 +395,10 @@ h1, h2, h3, h4, h5, h6 {
 .burger__item {
   padding-bottom: 10px;
 }
+.burger__item .active-screen {
+  color: #BF9C24;
+  font-weight: 700;
+}
 
 .socials {
   width: 100%;

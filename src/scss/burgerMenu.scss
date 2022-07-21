@@ -1,0 +1,291 @@
+.burger{
+	position: fixed;
+	z-index: 2;
+	top: 28px;
+	left: 10px;
+	width: 35px;
+	height: 20px;
+	&::before,&::after {
+		content: '';
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		display: block;
+		transition: all 0.5s linear 0s;
+	}
+	span{
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		margin: 5px 0;
+		transition: all 0.5s ease 0s;
+	}
+	
+}
+.burger.active{
+	&::before{
+		position: relative;
+		transform: rotate(45deg);
+		top:8px;
+	}
+	&::after{
+		position: relative;
+		transform: rotate(-45deg);
+		bottom: 8px;
+	}
+	span{
+		transform: scale(0);
+	}
+	
+}
+
+@media(min-width: 992px){
+	.burger.active{
+		&::before{
+			position: static;
+			transform: none;
+			top:8px;
+		}
+		&::after{
+			position: static;
+			transform: none;
+			bottom: 8px;
+		}
+		span{
+			transform: none;
+		}
+	}
+}
+
+
+.burger__bg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(41, 44, 39, 0.4);
+	backdrop-filter: blur(40px);
+	transition: all 1s ease 0s;
+	transform: translate(-100%, 0px);
+}
+.burger__bg.active{
+	position: fixed;
+	top: 0;
+	transform: translate(0px, 0px);
+}
+
+@media(min-width: 767px){
+	.burger__bg {
+		width: 643px;
+	}
+}
+@media(min-width: 992px){
+	.burger__bg {
+		position: static;
+		display: inline-flex;
+		flex-direction: column;
+		min-height: 150%;
+		max-height: 500%;
+		float: left;
+		width: 285px;
+		transform: translate(0px, 0px);
+	}
+
+	.burger__bg.active{
+		
+		position: static;
+		top: 0;
+		transform: translate(0px, 0px);
+	}
+}
+
+
+.burger__body {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	transition: all 1s ease 0s;
+	transform: translate(-100%, 0px);
+
+}
+.burger__body.active{
+	position: fixed;
+	top: 0;
+	transform: translate(0px, 0px);
+}
+
+@media(min-width: 767px){
+	.burger__body {
+		justify-content: end;
+		width: 643px;
+		min-height: 100%;
+	}
+}
+@media(min-width: 992px){
+	.burger__body{
+		position: fixed;
+		flex: 1;
+		justify-content: flex-end;
+
+		width: 100%;
+		transform: translate(0px, 0px);
+	}
+
+	.burger__body.active{
+		position: fixed;
+		top: 0;
+		transform: translate(0px, 0px);
+	}
+}
+
+
+
+
+
+.burger__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	z-index: 2;
+}
+
+@media(min-width: 767px){
+	.burger__wrapper {
+		max-height: 80%;
+	}
+}
+@media(min-width: 992px){
+	.burger__wrapper {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+
+.sing-in {
+	z-index: 1;
+	position: fixed;
+	top: 28px;
+	right: 10px;
+}
+
+@media(min-width: 992px){
+	.sing-in {
+		position: fixed;
+		top: 28px;
+		right: 10px;
+	}
+}
+
+
+.burger__column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	min-height: 70%;
+	max-height: 700px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 17px;
+}
+
+@media(min-width: 767px){
+	.burger__column {
+		min-height: 100%;
+
+		margin: 0;
+		margin-left: 15px;
+		justify-content: space-between;
+		text-align: left;
+	}
+}
+@media(min-width: 992px){
+	.burger__column {
+		min-height: 100%;
+
+		margin: 0;
+		margin-left: 15px;
+		justify-content: space-around;
+		text-align: left;
+	}
+}
+
+
+.burger__menu {
+	flex: 2 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-height: 450px;
+	width: 100%;
+}
+
+
+.burger__list {
+	max-height: 400px;
+	flex: 1 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+.burger__item {
+	padding-bottom: 10px;
+
+}
+
+
+.socials {
+	width: 100%;
+	max-height: 150px;
+	flex: 1 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+
+.socials__other {
+	flex: 1;
+	max-height: 100%;
+}
+
+
+.socials__lists {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+
+.socials__list {
+	flex: 1;
+
+	padding-bottom: 10px;
+}
+
+
+.socials__row {
+	flex: 1;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

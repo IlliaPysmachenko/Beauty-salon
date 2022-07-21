@@ -1,6 +1,7 @@
 @import 'nullstyle.scss';
 @import '_fonts.scss';
-
+@import 'burgerMenu.scss';
+@import 'firstScreen.scss';
 
 body {
 	font-family: 'Gilroy-regular';
@@ -15,10 +16,23 @@ h1 {
 	line-height: 96.8%;
 }
 
+@media (min-width: 767px) {
+	h1{
+		font-size: 70px;
+	}
+}
+
+@media (min-width: 992px) {
+	h1{
+		font-size: 80px;
+		line-height: 77.44px;
+	}
+}
+
+
 a:visited{
 	color: #fff;
 }
-
 
 
 .btn {
@@ -52,267 +66,26 @@ a:visited{
 }
 
 
-
-
-
-
-.burger{
-	position: fixed;
-	z-index: 2;
-	top: 28px;
-	left: 10px;
-	width: 35px;
-	height: 20px;
-	&::before,&::after {
-		content: '';
-		width: 100%;
-		height: 3px;
-		background-color: #fff;
-		display: block;
-		transition: all 0.5s linear 0s;
-	}
-	span{
-		display: block;
-		width: 100%;
-		height: 3px;
-		background-color: #fff;
-		margin: 5px 0;
-		transition: all 0.5s ease 0s;
-	}
-	
-}
-
-.burger.active{
-	&::before{
-		position: relative;
-		transform: rotate(45deg);
-		top:8px;
-	}
-	&::after{
-		position: relative;
-		transform: rotate(-45deg);
-		bottom: 8px;
-	}
-	span{
-		transform: scale(0);
-	}
-	
-}
-
-
-
-
-.burger__bg{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background: rgba(41, 44, 39, 0.4);
-	backdrop-filter: blur(40px);
-	transition: all 1s ease 0s;
-	transform: translate(-100%, 0px);
-}
-
-.burger__bg.active{
-	position: fixed;
-	top: 0;
-	transform: translate(0px, 0px);
-}
-
-
-.burger__body {
-	// display: none;
-	position: fixed;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-
-	// background: rgba(41, 44, 39, 0.4);
-	// backdrop-filter: blur(40px);
-	transition: all 1s ease 0s;
-	transform: translate(-100%, 0px);
-
-}
-.burger__body.active{
-	position: fixed;
-	top: 0;
-	transform: translate(0px, 0px);
-}
-
-
-.sing-in {
-	z-index: 1;
-	position: fixed;
-	top: 28px;
-	right: 10px;
-}
-
-
-.burger__wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-	height: 100vh;
-
-	z-index: 2;
-	
-	// padding-bottom: 5%;
-}
-
-.burger__column {
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 150px;
-	min-height: 70%;
-	max-height: 700px;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 17px;
-}
-.burger__menu {
-	flex: 2 1;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	max-height: 450px;
-	width: 100%;
-}
-.burger__list {
-	max-height: 400px;
-
-	flex: 1 1;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.burger__item {
-	padding-bottom: 10px;
-
-}
-
-
-.socials {
-	width: 100%;
-	max-height: 150px;
-	flex: 1 0;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-}
-
-.socials__other {
-	flex: 1;
-	
-	max-height: 100%;
-}
-.socials__lists {
-	flex: 1;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-}
-.socials__list {
-	flex: 1;
-
-	padding-bottom: 10px;
-}
-
-.socials__row {
-	flex: 1;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-
-
-
-
-
-.wrapper__first {
-	width: 100%;
-	background: url(../images/first-screen/model1.png) 60%/ cover no-repeat;
-}
-
-
 .container {
 	width: 100%;
+	margin: 0 auto;
 	padding: 0px 10px;
 }
 
-
-.basket {
-	position: fixed;
-	z-index: 0;
-	top: 28px;
-	right: 10px;
+@media (min-width: 767px) {
+	.container{
+		min-width: 768px;
+		padding: 0 30px;
+	}
 }
-
-
-
-.first-screen {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	
-	min-height: 100vh;
-
-}
-
-.label {
-	padding-top: 30px;
-}
-
-.first-screeen__content {
-	align-self: start;
-	max-width: 270px;
-	height: 246px;
-
-}
-.first-screeen__title {
-	padding-bottom: 20px;
-}
-.first-screeen__text {
-	line-height: 140%;
-	padding-bottom: 34px;
-}
-
-.dots{
-
-	width: 265px;
-
-	.dots__row{
-		padding-bottom: 13px;
-		
-		ul{
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-		}
-		li{
-			width: 5px;
-			height: 5px;
-			border-radius: 50%;
-			background: #40423B;
-		}
+@media (min-width: 992px) {
+	.container{
+		max-width: 1058px;
+		padding: 0;
 	}
 }
 
 
+// @import 'burgerMenu.scss';
+// @import 'firstScreen.scss';
 
-@import 'tablet.scss';
-@import 'desktop.scss';

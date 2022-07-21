@@ -1,104 +1,22 @@
 @media(min-width: 992px){
 
 
+
+
+
+
+
+
+
 	
 
-	.container{
-		max-width: 1058px;
-		margin: 0 auto;
-		padding: 0 15px;
-	}
 
-	h1{
-		font-size: 80px;
-		line-height: 77.44px;
-	}
-	
 	
 
-	.burger.active{
-		&::before{
-			position: static;
-			transform: none;
-			top:8px;
-		}
-		&::after{
-			position: static;
-			transform: none;
-			bottom: 8px;
-		}
-		span{
-			transform: none;
-		}
-	}
 
 
 
 
-	.burger__bg {
-		position: static;
-		display: inline-flex;
-		flex-direction: column;
-		min-height: 150%;
-		max-height: 500%;
-		float: left;
-		width: 285px;
-		transform: translate(0px, 0px);
-	}
-
-	.burger__bg.active{
-		
-		position: static;
-		top: 0;
-		transform: translate(0px, 0px);
-	}
-
-	.burger__body{
-		position: fixed;
-		flex: 1;
-		justify-content: flex-end;
-
-		width: 100%;
-		transform: translate(0px, 0px);
-	}
-
-	.burger__body.active{
-		position: fixed;
-		top: 0;
-		transform: translate(0px, 0px);
-	}
-
-	.sing-in {
-		position: fixed;
-		top: 28px;
-		right: 10px;
-	}
-
-
-	.basket{
-		position: sticky;
-		display: inline;
-		float: right;
-
-	}
-
-	.burger__wrapper {
-		position: relative;
-		width: 100%;
-		height: 100vh;
-	}
-
-	.burger__column {
-		min-height: 100%;
-
-		margin: 0;
-		margin-left: 15px;
-		justify-content: space-around;
-		text-align: left;
-	}
-
-	.first-screeen__content{
-		max-width: 685px;
-	}
+	
 	
 }

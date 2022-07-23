@@ -31,6 +31,16 @@ function main() {
 
 //----------------------------------------------
 
+	if (window.innerWidth > 992) {
+		// burgerHeight();
+		console.log(document.querySelector('.wrapper').style.height);
+	}
+
+
+	function burgerHeight () {
+		
+		document.getElementsByClassName('burger__bg').style.height = document.querySelector('body').style.height;
+	}
 
 
 
@@ -43,12 +53,33 @@ function main() {
 
 
 
+window.addEventListener('scroll', function (e) {
+	
+		// let div = document.querySelector('.wra')
+	const pageScroll = window.scrollY;
+	const params = document.querySelector('.wrapper__first').getBoundingClientRect();
+	if (pageScroll + params.top > params.top + params.height ) {
+
+		console.log(1);
+		}
+	})
 
 
 
 
 
-	console.log('work');
+
+
+	// pageScroll > params.top && 
+
+
+	// params.top + 
+
+
+
+
+
+	console.log(document);
 
 }
 

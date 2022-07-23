@@ -1,14 +1,23 @@
 @import 'nullstyle.scss';
 @import '_fonts.scss';
 @import 'burgerMenu.scss';
-@import 'firstScreen.scss';
+@import 'buttons.scss';
+@import 'firstScreen';
 
 body {
 	font-family: 'Gilroy-regular';
 	font-size: 15px;
 	color: #fff;
 	background: #000;
+	// max-width: 100%;
+	// height: 100%;
 }
+
+
+a:visited{
+	color: #fff;
+}
+
 
 h1 {
 	font-family: 'NTR';
@@ -29,63 +38,49 @@ h1 {
 	}
 }
 
-
-a:visited{
-	color: #fff;
+.wrapper {
+	display: flex;
+	max-width: 100%;
+	// height: 100%;
+}
+@media (min-width: 992px) {
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 
-.btn {
-	position: relative;
-	z-index: 0;
-	width: 187px;
-	height: 53px;
-	border: 2px solid #fff;
-	&::after{
-		content: '';
-		position: absolute;
-		top: 50%;
-		right: -15%;
-		width: 50px;
-		height: 2px;
-		background-color: #BF9C24;
-	}
-	a{
-		display: flex;
+
+
+.wrapper__content {
+	max-width: 100%;
+}
+@media (min-width: 992px){
+	.wrapper__content {
 		flex: 1 1 auto;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		font-weight: 700;
-		color: #BF9C24;
-		&:visited{
-			color: #BF9C24;
-		}
 	}
+}
+
+.wrapper__first {
+	
 }
 
 
 .container {
-	width: 100%;
-	margin: 0 auto;
-	padding: 0px 10px;
+	position: relative;
+	padding: 0 10px;
 }
-
-@media (min-width: 767px) {
-	.container{
-		min-width: 768px;
-		padding: 0 30px;
-	}
-}
-@media (min-width: 992px) {
-	.container{
+@media (min-width: 992px){
+	.container {
 		max-width: 1058px;
-		padding: 0;
+		padding: 0 15px;
+		margin: 0 auto;
 	}
 }
 
 
-// @import 'burgerMenu.scss';
-// @import 'firstScreen.scss';
+
+
+
 

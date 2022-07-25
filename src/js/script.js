@@ -2,7 +2,7 @@
 function main() {
 	
 
-	//----------Toggle burger menu-------------
+//--------------PopUp burger menu-------------
 	let bg = document.querySelector('.burger__body');
 	let header = document.querySelector('.burger__bg');
 	let burger = document.querySelector('.burger');
@@ -30,39 +30,38 @@ function main() {
 	})
 
 //----------------------------------------------
-
-	if (window.innerWidth > 992) {
-		// burgerHeight();
-		console.log(document.querySelector('.wrapper').style.height);
-	}
-
-
-	function burgerHeight () {
-		
-		document.getElementsByClassName('burger__bg').style.height = document.querySelector('body').style.height;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-window.addEventListener('scroll', function (e) {
 	
-		// let div = document.querySelector('.wra')
-	const pageScroll = window.scrollY;
-	const params = document.querySelector('.wrapper__first').getBoundingClientRect();
-	if (pageScroll + params.top > params.top + params.height ) {
+// ------------------Active screen burger---------------
+	const observer = new IntersectionObserver(enteries => {
+		enteries.forEach(entry => {
+			if (entry.isIntersecting) {
+				document.querySelectorAll('.burger__item-link').forEach(link => {
+					link.classList.toggle('active-screen', link.getAttribute('href').replace('#', '') === entry.target.id)
+					
+				})
+			}
+		})
+	}, {
+		threshold: 0.7,
+	});
 
-		console.log(1);
+	document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+	document.querySelector('.burger__list').addEventListener('click', event => {
+		if (event.target.classList.contains('burger__item-link')) {
+			event.preventDefault();
+
+			const id = event.target.getAttribute('href').replace('#', '');
+
+			window.scrollTo({
+				top: document.getElementById(id).offsetTop,
+				behavior: 'smooth'
+			})
+		
 		}
 	})
+	
+// -----------------------------------------------------
 
 
 
@@ -70,16 +69,8 @@ window.addEventListener('scroll', function (e) {
 
 
 
-	// pageScroll > params.top && 
 
 
-	// params.top + 
-
-
-
-
-
-	console.log(document);
 
 }
 

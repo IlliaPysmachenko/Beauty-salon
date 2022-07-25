@@ -1,4 +1,4 @@
-.wrapper__first_bg {
+.wrapper-first__bg {
 	position: absolute;
 	z-index: 0;
 	top: 0;
@@ -40,27 +40,6 @@
 
 
 
-.basket {
-	position: fixed;
-	top: 35px;
-	right: 10px;
-}
-@media(min-width: 767px){
-	.basket {
-		right: 15px;
-	}
-}
-@media (min-width: 992px) {
-	.basket {
-		position: inherit;
-	}
-}
-
-
-.first-screeen__content {
-	// flex: 1;
-}
-
 .first-screeen__title {
 	padding-bottom: 20px;
 }
@@ -69,10 +48,7 @@
 	padding-bottom: 34px;
 }
 
-.first-screeen__button {
-}
-.btn {
-}
+
 
 
 .dots{

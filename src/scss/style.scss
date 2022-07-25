@@ -1,19 +1,22 @@
-@import 'nullstyle.scss';
-@import '_fonts.scss';
-@import 'burgerMenu.scss';
-@import 'buttons.scss';
+@import 'nullstyle';
+@import '_fonts';
+@import 'burgerMenu';
+@import 'buttons';
 @import 'firstScreen';
+@import 'secondScreen';
 
 body {
 	font-family: 'Gilroy-regular';
 	font-size: 15px;
 	color: #fff;
-	background: #000;
+	background: #ededed;
 	// max-width: 100%;
 	// height: 100%;
 }
 
-
+a {
+	color: #fff;
+}
 a:visited{
 	color: #fff;
 }
@@ -39,6 +42,7 @@ h1 {
 }
 
 .wrapper {
+	position: relative;
 	display: flex;
 	max-width: 100%;
 	// height: 100%;
@@ -50,21 +54,47 @@ h1 {
 	}
 }
 
+.title{
+	font-family: 'NTR';
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
 
+
+	color:#2F3438;
+}
 
 
 .wrapper__content {
-	max-width: 100%;
+	width: 100%;
 }
-@media (min-width: 992px){
-	.wrapper__content {
-		flex: 1 1 auto;
+
+.basket {
+	z-index: 1;
+	position: fixed;
+	top: 30px;
+	right: 10px;
+}
+@media(min-width: 767px){
+	.basket {
+		right: 15px;
+	}
+}
+@media (min-width: 992px) {
+	.basket {
+		max-width: 1058px;
+		text-align: right;
+		position: sticky;
+		height: 0;
+		margin-right: 100px;
+	}
+}
+@media(min-width: 1500px) {
+	.basket {
+		margin: 0 auto;
 	}
 }
 
-.wrapper__first {
-	
-}
 
 
 .container {
@@ -73,12 +103,11 @@ h1 {
 }
 @media (min-width: 992px){
 	.container {
+		margin: 0 auto;
 		max-width: 1058px;
 		padding: 0 15px;
-		margin: 0 auto;
 	}
 }
-
 
 
 

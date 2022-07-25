@@ -1,9 +1,6 @@
 @import 'nullstyle';
 @import '_fonts';
-@import 'burgerMenu';
-@import 'buttons';
-@import 'firstScreen';
-@import 'secondScreen';
+
 
 body {
 	font-family: 'Gilroy-regular';
@@ -112,4 +109,8 @@ h1 {
 
 
 
-
+@import 'burgerMenu';
+@import '_buttons';
+@import 'firstScreen';
+@import 'secondScreen';
+@import 'thirdScreen';

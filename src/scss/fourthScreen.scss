@@ -1,0 +1,27 @@
+.our-services__card{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 330px;
+	background: linear-gradient(rgba(0, 0, 0, 0.301)), url(/images/fourthScreen/procedure1.jpg) 100%/ cover no-repeat;
+	border-radius: 5px;
+}
+
+.our-services__border{
+	display: flex;
+	align-items: end;
+	justify-content: center;
+	width: 90%;
+	height: 90%;
+	border: 2px solid rgba(191, 156, 36, 0.6);
+	border-radius: 5px;
+}
+
+.our-services__procedure{
+	font-family: 'Gilroy-regular';
+	font-weight: 500;
+	font-size: 24px;
+	text-transform: uppercase;
+	padding-bottom: 35px;
+}

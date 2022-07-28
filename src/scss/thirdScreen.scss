@@ -68,6 +68,11 @@
 	align-self: center;
 	justify-self: center;
 }
+@media(min-width: 767px){
+	.exp__title{
+		align-self: end;
+	}
+}
 
 .exp__logo{
 	grid-area: logo;

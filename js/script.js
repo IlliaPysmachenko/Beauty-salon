@@ -64,27 +64,20 @@ function main() {
 // -----------------------------------------------------
 
 // ------------------Slider of fouth screen-------------
-	
-	if (window.outerWidth < 767) {
+
+function sliderFourthScreen () {
 		let cardsColl = document.querySelectorAll('.our-services__card');
 		let line = document.querySelector('.slider__line');
-		// let count = 0;
 		let offset = 0;
-
-
-
 		let x1 = null;
 
 		let card = document.querySelector('.our-services__card');
 		
-		
-		line.style.minWidth = `${(card.offsetWidth + 30)*cardsColl.length}px`;
-		// console.log(line);
-
+		line.style.minWidth = `${(card.offsetWidth + 20) * cardsColl.length}px`;
 
 		function next() {
-			offset -= 300;
-			if (offset < -1575) {
+			offset -= 320;
+			if (offset < -((card.offsetWidth + 20) * cardsColl.length - 1)) {
 				offset = 0;
 			}
 
@@ -93,20 +86,13 @@ function main() {
 
 
 		function prev() {
-			offset += 300;
+			offset += 320;
 			if (offset > 0) {
-				offset = -1575;
+				offset = -(card.offsetWidth + 20) * (cardsColl.length - 1);
 			}
 
 			line.style.transform = `translate(${offset}px)`;
 		}
-
-
-		document.querySelector('.next').addEventListener('click', next);
-		document.querySelector('.prev').addEventListener('click', prev);
-
-
-
 
 		line.addEventListener('touchstart', event => {
 			const touch = event.touches[0];
@@ -114,39 +100,57 @@ function main() {
 			
 		})
 
+		let isEvent = false;
+
 		line.addEventListener('touchmove', event => {
 			if (!x1) return false;
 
 			let x2 = event.touches[0].clientX;
 			let diff = x2 - x1;
 
-
 			if (diff < 0 && diff >= -100) {
-				line.style.transform = `translate(${diff}px)`;
+				line.style.transform = `translate(${offset + diff}px)`;
 				if (line.addEventListener('touchend', () => {
 					line.style.transform = `translate(${offset}px)`
 				}));
-				
-				// return line.style.transform = `translate(${offset}px)`;
 			}
 			if (diff > 0 && diff <= 100) {
-				line.style.transform = `translate(${diff}px)`;
+				line.style.transform = `translate(${offset + diff}px)`;
 				if (line.addEventListener('touchend', () => {
 					line.style.transform = `translate(${offset}px)`
 				}));
-				
-				// return line.style.transform = `translate(${offset}px)`;
 			}
-			
 
+			if ( !isEvent ) {
 
-
-
-
+				if (diff < -100) {
+					next();
+					isEvent = true;
+				} 
+				else if (diff > 150) {
+					prev();
+					isEvent = true;
+				}
+				
+				setTimeout( function() {
+					isEvent = false;
+				}, 300 );
+			}
 
 		})
-		
+
+		return;
 	}
+
+	window.addEventListener('resize', () => {
+		if (window.outerWidth < 767) {
+			sliderFourthScreen ();
+			return false;
+		} 
+	})
+
+	
+	
 
 
 
